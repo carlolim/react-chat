@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-chat/static/css/main.6a177ab0.chunk.css"
   },
   {
-    "revision": "daceb6852412528229307ee4f8dc0ac3",
+    "revision": "c5e0a1f6e0ee8eefced1ee3b3fb77742",
     "url": "/react-chat/index.html"
   }
 ];
