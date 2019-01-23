@@ -17,3 +17,11 @@
 .text-left {
 	text-align: left;
 }
+
+.input-fix {
+	margin: 0;
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: 20px;
+}

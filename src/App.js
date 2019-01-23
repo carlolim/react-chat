@@ -15,6 +15,14 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+  //    setInterval(function() {
+  //        var objDiv = document.getElementById("messages-window");
+  //        if(objDiv)
+  //            objDiv.scrollTop = objDiv.scrollHeight;
+  //    }, 500);
+  }
+
   handleMessageChange(e) {
     this.setState({...this.state, message: e.target.value});
   }
@@ -42,8 +50,6 @@ class App extends Component {
 
   isMe(userId) {
       let user = JSON.parse(localStorage.getItem('user'));
-      console.log(user.id);
-      console.log(userId);
       return user.id === userId;
   }
 
@@ -53,7 +59,7 @@ class App extends Component {
           {this.hasUser() ? 
 
               <div>
-                  <section className="balloon container with-title">
+                  <section id="messages-window" className="balloon container with-title" style={{ maxHeight: '600px', overflowY: 'scroll'}}>
                     <div className="messages">
 
                       {this.props.state.messages.map((item, index) => 
@@ -78,8 +84,8 @@ class App extends Component {
                                   e.preventDefault();
                                   this.handleAddMessage();
                               }}>
-                              <input value={this.state.message} onChange={this.handleMessageChange.bind(this)} id="name_field" type="text" name="name" className="input" />
-                              <button type="button" className="btn">Send</button>
+                              <input autoComplete="off" value={this.state.message} onChange={this.handleMessageChange.bind(this)} id="name_field" type="text" name="name" className="input input-fix" />
+                              <button className="btn">Send</button>
                           </form>
                       </div>
                   </section>

@@ -48,6 +48,13 @@ export const addUserToFirebase = (name) => {
 			else {
 				let user = { id, name };
 				localStorage.setItem('user', JSON.stringify(user));
+				addMessageToFirebase({
+					content: name + " joined the chat.",
+					userId: '1',
+					user: {
+						id: '1', name : '[system]'
+					}
+				})
 				window.location.reload();
 			}
 		});

@@ -19,9 +19,9 @@ class Register extends Component {
                           e.preventDefault();
                           addUserToFirebase(e.target.name.value);
                       }}>
-                      <input id="name_field" type="text" name="name" className="input" />
+                      <input autoComplete="off" id="name_field" type="text" name="name" className="input input-fix" />
                       <br />
-                      <button type="button" className="btn">Submit</button>
+                      <button className="btn">Submit</button>
                   </form>
               </div>
           </section>
